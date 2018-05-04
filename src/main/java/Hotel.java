@@ -67,14 +67,14 @@ public class Hotel {
         } return "No Vacant Rooms";
     }
 
-    public ArrayList<Bedroom> getVacantRooms(){
-        ArrayList<Bedroom> vacantRooms;
-        for(Bedroom bedroom : this.bedrooms) {
-            if (bedroom.getGuestsInRoom() == 0) {
-                vacantRooms.add(bedroom);
-                return vacantRooms;
-            }
-        }
-        return null;
-    }
+//    public ArrayList<Bedroom> getVacantRooms(){
+//        ArrayList<Bedroom> vacantRooms;
+//        for(Bedroom bedroom : this.bedrooms) {
+//            if (bedroom.getGuestsInRoom() == 0) {
+//                vacantRooms.add(bedroom);
+//                return vacantRooms;
+//            }
+//        }
+//        return null;
+//    }
 }

@@ -98,10 +98,10 @@ public class HotelTest {
         assertEquals("Exec Double, Room 32", hotel1.checkForVacantRoom(bedroom2));
     }
 
-    @Test
-    public void getNumberofVacantRooms() {
-        Bedroom emptybedroom1 = new Bedroom(1, 23, "Empty", 10);
-        Bedroom emptybedroom2 = new Bedroom(2, 24, "Empty2", 10);
-        assertEquals(3, hotel1.getVacantRooms().size());
-    }
+//    @Test
+//    public void getNumberofVacantRooms() {
+//        Bedroom emptybedroom1 = new Bedroom(1, 23, "Empty", 10);
+//        Bedroom emptybedroom2 = new Bedroom(2, 24, "Empty2", 10);
+//        assertEquals(3, hotel1.getVacantRooms().size());
+//    }
 }
