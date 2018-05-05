@@ -8,11 +8,11 @@ import java.util.ArrayList;
 
 public class Hotel {
 
-    String name;
-    double rating;
-    ArrayList<Bedroom> bedrooms;
-    ArrayList<ConferenceRoom> conferenceRooms;
-    ArrayList<UtilityRoom> utilityRooms;
+    private String name;
+    private double rating;
+    private ArrayList<Bedroom> bedrooms;
+    private ArrayList<ConferenceRoom> conferenceRooms;
+    private ArrayList<UtilityRoom> utilityRooms;
 
 
     public Hotel(String name, double rating) {
@@ -67,14 +67,12 @@ public class Hotel {
         } return "No Vacant Rooms";
     }
 
-//    public ArrayList<Bedroom> getVacantRooms(){
-//        ArrayList<Bedroom> vacantRooms;
-//        for(Bedroom bedroom : this.bedrooms) {
-//            if (bedroom.getGuestsInRoom() == 0) {
-//                vacantRooms.add(bedroom);
-//                return vacantRooms;
-//            }
-//        }
-//        return null;
-//    }
+    public ArrayList<Bedroom> getVacantRooms(){
+        ArrayList<Bedroom> vacantRooms = new ArrayList<>();
+        for(Bedroom bedroom : this.bedrooms) {
+            if (bedroom.getGuestsInRoom() == 0) {
+                vacantRooms.add(bedroom);
+            }
+        } return vacantRooms;
+    }
 }

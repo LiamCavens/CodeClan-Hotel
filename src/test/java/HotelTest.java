@@ -14,6 +14,8 @@ public class HotelTest {
     Hotel hotel1;
     Bedroom bedroom1;
     Bedroom bedroom2;
+    Bedroom emptybedroom1;
+    Bedroom emptybedroom2;
     ConferenceRoom conferenceRoom;
     UtilityRoom diningroom;
     UtilityRoom lobby;
@@ -35,6 +37,8 @@ public class HotelTest {
 
         bedroom1 = new Bedroom(3, 69, "Triple Deluxe", 80);
         bedroom2 = new Bedroom(2, 32, "Exec Double", 120);
+        emptybedroom1 = new Bedroom(1, 23, "Empty", 10);
+        emptybedroom2 = new Bedroom(2, 24, "Empty2", 10);
 
         conferenceRoom = new ConferenceRoom(25, "Stag Do Party", 45);
 
@@ -48,6 +52,8 @@ public class HotelTest {
         bedroom1.addGuestsToRoom(guest3);
         hotel1.addBedroomToList(bedroom1);
         hotel1.addBedroomToList(bedroom2);
+        hotel1.addBedroomToList(emptybedroom1);
+        hotel1.addBedroomToList(emptybedroom2);
         hotel1.addConferenceRoomToList(conferenceRoom);
         hotel1.addUtilityToList(diningroom);
         hotel1.addUtilityToList(lobby);
@@ -89,7 +95,7 @@ public class HotelTest {
     }
 
     @Test
-    public void getNameofGuestsInRoom() {
+    public void getNameOfGuestsInRoom() {
         assertEquals(3, hotel1.getGuestsInRoom(bedroom1).size());
     }
 
@@ -98,10 +104,8 @@ public class HotelTest {
         assertEquals("Exec Double, Room 32", hotel1.checkForVacantRoom(bedroom2));
     }
 
-//    @Test
-//    public void getNumberofVacantRooms() {
-//        Bedroom emptybedroom1 = new Bedroom(1, 23, "Empty", 10);
-//        Bedroom emptybedroom2 = new Bedroom(2, 24, "Empty2", 10);
-//        assertEquals(3, hotel1.getVacantRooms().size());
-//    }
+    @Test
+    public void getNumberOfVacantRooms() {
+        assertEquals(3, hotel1.getVacantRooms().size());
+    }
 }
