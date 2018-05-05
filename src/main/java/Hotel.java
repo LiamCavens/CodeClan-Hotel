@@ -57,6 +57,10 @@ public class Hotel {
         }
     }
 
+    public void checkGuestOut(Guest guest, Bedroom bedroom) {
+        bedroom.removeGuestFromRoom(guest);
+    }
+
     public ArrayList<Guest> getGuestsInRoom(Room room) {
         return room.getGuests();
     }

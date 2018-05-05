@@ -30,6 +30,10 @@ public abstract class Room {
         this.guests.add(guest);
     }
 
+    public void removeGuestFromRoom(Guest guest) {
+        this.guests.remove(guest);
+    }
+
     public int getGuestsInRoom() {
         return this.guests.size();
     }

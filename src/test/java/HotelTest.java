@@ -89,6 +89,14 @@ public class HotelTest {
     }
 
     @Test
+    public void checkGuestOutOfRoom() {
+        hotel1.checkGuestInToRoomIfSpace(guest4, bedroom2);
+        hotel1.checkGuestInToRoomIfSpace(guest3, bedroom2);
+        hotel1.checkGuestOut(guest4, bedroom2);
+        assertEquals(1, bedroom2.getGuestsInRoom());
+    }
+
+    @Test
     public void doNotCheckGuestInWhenFull() {
         hotel1.checkGuestInToRoomIfSpace(guest4, bedroom1);
         assertEquals(3, bedroom1.getGuestsInRoom());
