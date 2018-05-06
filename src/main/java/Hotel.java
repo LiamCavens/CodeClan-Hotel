@@ -79,4 +79,8 @@ public class Hotel {
             }
         } return vacantRooms;
     }
+
+    public int guestStaysMultipleNights(Bedroom bedroom, int nightsStaying){
+        return (bedroom.getNightRate() * nightsStaying);
+    }
 }

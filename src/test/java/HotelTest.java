@@ -116,4 +116,10 @@ public class HotelTest {
     public void getNumberOfVacantRooms() {
         assertEquals(3, hotel1.getVacantRooms().size());
     }
+
+    @Test
+    public void guestStaysMultipleNights() {
+        hotel1.checkGuestInToRoomIfSpace(guest1, bedroom1);
+        assertEquals(240, hotel1.guestStaysMultipleNights(bedroom1, 3));
+    }
 }
